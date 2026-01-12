@@ -1,0 +1,53 @@
+############################
+# Arquivos sensíveis
+############################
+config.php
+
+############################
+# Uploads e arquivos gerados
+############################
+/public/uploads/
+/var/
+/storage/
+/cache/
+
+############################
+# Composer
+############################
+/vendor/
+composer.phar
+
+############################
+# IDEs
+############################
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+/nbproject/private/
+nbbuild/
+nbdist/
+.nb-gradle/
+
+############################
+# Git
+############################
+*.orig
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+
+############################
+# Logs
+############################
+*.log
+
+############################
+# Sistema Operacional
+############################
+.DS_Store
+Thumbs.db

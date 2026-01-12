@@ -1,99 +1,87 @@
-🚗 CarHub
+# 🚗 CarHub
 
-Conectando tecnologia, estilo e performance
+![Mini MVC](https://img.shields.io/badge/Mini%204-MVC-green)
+![PHP Version](https://img.shields.io/badge/PHP-8.3-blue)
+![MariaDB](https://img.shields.io/badge/MariaDB-10.5-lightblue)
+![AdminLTE 2](https://img.shields.io/badge/AdminLTE%204-Theme-blue)
+![Composer](https://img.shields.io/badge/Composer-Package_Manager-orange)
 
-CarHub é um sistema de gestão para auto center e lojas de som e acessórios automotivos, desenvolvido para centralizar agendamentos, serviços, produtos, clientes e ordens de serviço em uma única plataforma moderna e eficiente.
+**Conectando tecnologia, estilo e performance**
 
-📌 Visão Geral
+CarHub é um sistema de gestão para **auto center e lojas de som e acessórios automotivos**, desenvolvido para centralizar serviços, produtos, clientes e ordens de serviço em uma única plataforma moderna e eficiente.
+
+![](public/capa_readme.png)
+
+---
+
+## 📌 Visão Geral
 
 O CarHub foi projetado para atender empresas que trabalham com:
 
-🔊 Som automotivo
+- 🔊 Som automotivo
+- 🛞 Suspensão
+- 🎥 Câmeras de ré e sensores
+- 🪟 Insulfilm e PPF
+- 💡 Iluminação automotiva (LEDs, faróis, etc.)
+- 🔧 Acessórios automotivos em geral
 
-🛞 Suspensão
+O sistema atua como um **hub central**, conectando tecnologia, estética e performance do veículo.
 
-🎥 Câmeras de ré e sensores
+---
 
-🪟 Insulfilm e PPF
+## 🚀 Funcionalidades
 
-💡 Iluminação automotiva (LEDs, faróis, etc.)
+### 🔐 Autenticação
+- Login seguro
+- Controle de permissões por usuário
+- Perfis administrativos e operacionais
 
-🔧 Acessórios automotivos em geral
+### 👤 Clientes
+- Cadastro completo de clientes
+- Histórico de serviços realizados
+- Veículos vinculados ao cliente
 
-O sistema atua como um hub central, conectando tecnologia, estética e performance do veículo.
+### 🚘 Veículos
+- Cadastro detalhado do veículo
+- Informações técnicas e observações
+- Histórico de modificações e serviços
 
-🚀 Funcionalidades
-🔐 Autenticação
+### 🧾 Ordens de Serviço
+- Abertura e gerenciamento de OS
+- Serviços e produtos vinculados
+- Status da OS (aberta, em andamento, finalizada)
+- Observações técnicas
 
-Login seguro
+### 📦 Produtos
+- Cadastro de produtos e acessórios
+- Controle de estoque
+- Categorias personalizadas
 
-Controle de permissões por usuário
+### 🛠️ Serviços
+- Cadastro de serviços
+- Valores e tempo estimado
+- Associação com ordens de serviço
 
-Perfis administrativos e operacionais
+### 📊 Relatórios *(em desenvolvimento)*
+- Serviços mais realizados
+- Faturamento por período
+- Produtos mais vendidos
 
-👤 Clientes
+---
 
-Cadastro completo de clientes
+## 🧱 Arquitetura
 
-Histórico de serviços realizados
+- **Backend:** PHP
+- **Framework:** Mini3
+- **Frontend:** AdminLTE
+- **Padrão:** MVC (Model-View-Controller)
+- **Banco de Dados:** MySQL / MariaDB
 
-Veículos vinculados ao cliente
+---
 
-🚘 Veículos
+## 📂 Estrutura do Projeto
 
-Cadastro detalhado do veículo
-
-Informações técnicas e observações
-
-Histórico de modificações e serviços
-
-🧾 Ordens de Serviço
-
-Abertura e gerenciamento de OS
-
-Serviços e produtos vinculados
-
-Status da OS (aberta, em andamento, finalizada)
-
-Observações técnicas
-
-📦 Produtos
-
-Cadastro de produtos e acessórios
-
-Controle de estoque
-
-Categorias personalizadas
-
-🛠️ Serviços
-
-Cadastro de serviços
-
-Valores e tempo estimado
-
-Associação com ordens de serviço
-
-📊 Relatórios (em desenvolvimento)
-
-Serviços mais realizados
-
-Faturamento por período
-
-Produtos mais vendidos
-
-🧱 Arquitetura
-
-Backend: PHP
-
-Framework: Mini3
-
-Frontend: AdminLTE
-
-Padrão: MVC (Model-View-Controller)
-
-Banco de Dados: MySQL / MariaDB
-
-📂 Estrutura do Projeto
+```text
 carhub-system/
 ├── app/
 │   ├── Controllers/
@@ -112,91 +100,120 @@ carhub-system/
 ├── config.php
 ├── .htaccess
 └── README.md
+```
 
-⚙️ Requisitos
+---
 
-PHP >= 7.4
+## ⚙️ Requisitos
 
-MySQL ou MariaDB
+- PHP >= 8.3
+- MySQL ou MariaDB >= 10.5
+- Apache com mod_rewrite habilitado
+- Composer
 
-Apache com mod_rewrite habilitado
+---
 
-Composer (opcional)
+## 🛠️ Instalação
 
-🛠️ Instalação
+Siga os passos abaixo para instalar e configurar o projeto corretamente.
 
-Clone o repositório:
+#### 🚀 1. Clonar o Repositório ou Baixar o ZIP  
+Você pode **clonar** o repositório com o comando:
 
-git clone https://github.com/seu-usuario/carhub-system.git
+```sh
+git clone git@github.com:fahmedeiros/carhub-system.git
+```
 
+Ou, se preferir, baixe o ZIP do repositório, extraia os arquivos e navegue até a pasta do projeto.
 
-Configure o banco de dados em config.php
+#### 📦 2. Instalar as Dependências
+Dentro da pasta do projeto, execute o comando para instalar as dependências usando o Composer:
 
-Crie o banco de dados:
+```sh
+composer install
+```
 
-CREATE DATABASE carhub CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+### ⚙️ 3. Configurar o Projeto
 
+1. Crie um arquivo chamado `config.php`.
+2. Copie o conteúdo do arquivo `config.example.php` e cole no novo arquivo `config.php`.
+3. Abra o arquivo `config.php` e edite as configurações do banco de dados conforme necessário, ajustando os seguintes parâmetros:
 
-Configure o virtual host ou use o diretório /public como raiz
+```php
+define('DB_TYPE', 'mysql'); // Tipo do banco de dados
+define('DB_HOST', 'localhost'); // Endereço do servidor do banco de dados
+define('DB_NAME', 'carhub'); // Nome da base de dados
+define('DB_USER', 'root'); // Usuário do banco de dados
+define('DB_PASS', ''); // Senha do banco de dados
+define('DB_CHARSET', 'utf8'); // Charset para a conexão
+```
 
-Acesse no navegador:
+**As configurações das variáveis acima são baseadas nos bancos de dados de exemplo e em um servidor local.**
 
-http://localhost/carhub
+---
 
-🔐 Segurança
+## 🔐 Segurança
 
-Senhas criptografadas
+- Senhas criptografadas
+- Proteção contra acesso não autorizado
+- Validação de dados no backend
 
-Proteção contra acesso não autorizado
+---
 
-Validação de dados no backend
+## 🎨 Interface
 
-🎨 Interface
+- Layout moderno baseado no AdminLTE
+- Design responsivo
+- Foco em usabilidade e produtividade
 
-Layout moderno baseado no AdminLTE
+---
 
-Design responsivo
+## 🗺️ Roadmap
 
-Foco em usabilidade e produtividade
+- Dashboard com métricas
+- Controle financeiro
+- Integração com WhatsApp
+- Upload de imagens nas OS
+- API REST
+- Versão mobile
 
-🗺️ Roadmap
+## 🤝 Contribuição
 
- Dashboard com métricas
+Quer contribuir com o projeto? Siga estas diretrizes:
 
- Controle financeiro
+1. **Crie um Fork** deste repositório.
+2. **Crie uma nova branch** para sua funcionalidade ou correção:
+   ```sh
+   git checkout -b feature/minha-feature
+   ```
+3. **Realize as alterações** necessárias e faça commit:
+   ```sh
+   git commit -m "Adiciona nova funcionalidade X"
+   ```
+4. **Envie suas modificações** para seu fork:
+   ```sh
+   git push origin feature/minha-feature
+   ```
+5. **Abra um Pull Request** e aguarde a revisão.
 
- Integração com WhatsApp
+Agradecemos sua contribuição! 🚀
 
- Upload de imagens nas OS
+---
 
- API REST
+## 📄 Licença
 
- Versão mobile
-
-🤝 Contribuição
-
-Contribuições são bem-vindas!
-
-Fork o projeto
-
-Crie sua branch (feature/nova-funcionalidade)
-
-Commit suas alterações
-
-Push para a branch
-
-Abra um Pull Request
-
-📄 Licença
-
-Este projeto está sob a licença MIT.
+Este projeto está sob a licença **MIT**.
 Consulte o arquivo LICENSE para mais informações.
 
-👨‍💻 Autor
+---
 
-Fabrício de Medeiros
+## 👨‍💻 Autor
+
+**Fabrício de Medeiros**  
 Projeto desenvolvido para gestão de auto center e lojas automotivas.
 
-⭐ Considerações Finais
+---
 
-O CarHub nasceu para ser o ponto central da gestão automotiva, unindo tecnologia, organização e performance em um único sistema.
+## ⭐ Considerações Finais
+
+O **CarHub** nasceu para ser o ponto central da gestão automotiva, unindo tecnologia, organização e performance em um único sistema.
